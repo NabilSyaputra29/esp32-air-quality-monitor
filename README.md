@@ -69,10 +69,14 @@ ESP32 mengirim data sensor memakai **HTTP POST** dengan isi **JSON** ke API web.
 
 ```
 esp32-air-quality-monitor/
-├── README.md
-└── monitoring_udara_wifi/
-    ├── monitoring_udara_wifi.ino
-    └── secrets.h.example
+├── firmware/
+│   └── monitoring_udara_wifi/
+│       ├── monitoring_udara_wifi.ino
+│       └── secrets.h.example
+├── web/                  # aplikasi web (dashboard dan API)
+├── .gitignore
+├── LICENSE
+└── README.md
 ```
 
 ## Pemecahan Masalah

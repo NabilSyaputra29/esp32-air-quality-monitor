@@ -1,0 +1,19 @@
+# Kredensial firmware (WiFi, URL server)
+secrets.h
+
+# Kredensial dan dependensi web Laravel
+.env
+.env.*
+!.env.example
+vendor/
+node_modules/
+
+# File instruksi alat AI
+CLAUDE.md
+AGENTS.md
+
+# Editor dan sistem
+.vscode/
+.idea/
+.DS_Store
+*.log

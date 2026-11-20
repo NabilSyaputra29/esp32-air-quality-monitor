@@ -37,4 +37,18 @@ class SensorController extends Controller
     {
         return response()->json(SensorReading::latest('id')->first());
     }
+
+    // Dipakai dashboard: mengambil riwayat data untuk grafik & tabel
+    public function history(Request $request)
+    {
+        $limit = min(200, max(10, (int) $request->query('limit', 60)));
+
+        $readings = SensorReading::latest('id')
+            ->limit($limit)
+            ->get()
+            ->reverse()
+            ->values();
+
+        return response()->json($readings);
+    }
 }

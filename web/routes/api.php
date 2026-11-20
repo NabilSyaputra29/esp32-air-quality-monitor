@@ -5,3 +5,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('/sensor', [SensorController::class, 'store']);
 Route::get('/sensor/latest', [SensorController::class, 'latest']);
+Route::get('/sensor/history', [SensorController::class, 'history']);
